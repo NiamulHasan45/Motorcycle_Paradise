@@ -13,7 +13,7 @@ const OneItem = () => {
 
     const { id } = useParams();
     const [item, setItem] = useState({});
-    console.log(item);
+
     useEffect(() => {
         const url = `http://localhost:5000/inventory/${id}`;
         console.log(url);
@@ -22,7 +22,7 @@ const OneItem = () => {
             .then(data => setItem(data))
     }, [])
 
-    const { img, name, supplier, description, price, quantity } = item;
+    const {img, name, supplier, description, price, quantity } = item;
 
     const handleProduct=(quantity)=>{
         if(quantity>0){
@@ -36,11 +36,28 @@ const OneItem = () => {
     }
 
 
+
     const handleForm = event =>{
         event.preventDefault();
         const number = itemRef.current.value;
         setRemainig(number);
+        console.log(remaining);
+        const url = `http://localhost:5000/inventory/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(remaining)
+        })
+        .then(res=> res.json())
+        .then(result =>{
+            console.log(result);
+        } )
     }
+
+
+
 
     return (
         <div className='product-page pb-5'>
