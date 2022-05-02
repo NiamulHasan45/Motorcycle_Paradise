@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import './OneItem.css';
 
@@ -42,18 +41,21 @@ const OneItem = () => {
         const number = itemRef.current.value;
         setRemainig(number);
         console.log(remaining);
-        const url = `http://localhost:5000/inventory/${id}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(remaining)
-        })
-        .then(res=> res.json())
-        .then(result =>{
-            console.log(result);
-        } )
+
+
+
+        // const url = `http://localhost:5000/inventory/${id}`;
+        // fetch(url, {
+        //     method: 'PUT',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(remaining)
+        // })
+        // .then(res=> res.json())
+        // .then(result =>{
+        //     console.log(result);
+        // } )
     }
 
 

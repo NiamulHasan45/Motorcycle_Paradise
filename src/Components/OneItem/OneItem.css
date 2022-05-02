@@ -20,3 +20,16 @@
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+    .product-container{
+        width: 70%;
+    }
+  }
+
+@media only screen and (max-width: 700px) {
+    .product-container{
+        width: 100%;
+    }
+
+  }
