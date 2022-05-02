@@ -53,15 +53,9 @@ const OneItem = () => {
 
 
     const handleForm = number => {
-        // event.preventDefault();
-
-        // console.log(event);
-        const quantity = parseInt(itemRef.current.value)+number;
-        // setRemainig(number);
+        
+        const quantity = parseInt(itemRef.current.value) + number;
         const data = { quantity };
-
-
-
         const url = `http://localhost:5000/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
@@ -90,11 +84,11 @@ const OneItem = () => {
                     <p className='mb-5'><small>{description}</small></p>
                     <h4>Available Quantity: {quantity}</h4>
                     <button onClick={() => handleProduct(quantity)} className='btn btn-primary px-4 py-2 mt-3'>Deliver this item</button>
-                    <form  className='m-5'>
+                    <form className='m-5'>
                         <label className='m-3 text-primary'><b>Re-stock this product:</b> </label>
                         <input type="number" ref={itemRef} required placeholder='Amount of product' />
                         <button className='
-                        btn btn-warning m-3' onClick={()=>handleForm(quantity)}>Submit</button>
+                        btn btn-warning m-3' onClick={() => handleForm(quantity)}>Submit</button>
                     </form>
                 </div>
             </div>

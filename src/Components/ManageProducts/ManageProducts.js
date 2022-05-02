@@ -31,7 +31,7 @@ const ManageProducts = () => {
     return (
         <div  className='inventory'>
             <div className='my-3'>welcome</div>
-            <h2 className='mt-5'>Welcome to the inventory.</h2>
+            <h2 className='mt-5'>Detailed information of the inventory.</h2>
 
             <div className='manage-one-product'>
                 {
