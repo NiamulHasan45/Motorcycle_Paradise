@@ -1,0 +1,14 @@
+.one-product-container{
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+.image-container{
+    height: 200px;
+}
+
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
