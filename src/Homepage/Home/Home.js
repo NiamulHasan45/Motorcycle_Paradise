@@ -17,8 +17,8 @@ const Home = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>YAMAHA</h3>
+                        <p>Introducing Yamaha Motor's brand slogan, "Revs your Heart".</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
@@ -28,8 +28,8 @@ const Home = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>SUDZUKI</h3>
+                        <p>"Develop products of superior value by focusing on the customer"</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -39,8 +39,8 @@ const Home = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h3>VINTAGE HONDA</h3>
+                        <p>A brand that celebrates the rich motorsports history and innovative soul of The Honda Motor Company.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

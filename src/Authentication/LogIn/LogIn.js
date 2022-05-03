@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Button, Form} from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './LogIn.css';
 import google from '../../Components/Images/google-01.png';

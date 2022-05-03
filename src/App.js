@@ -6,6 +6,7 @@ import Registration from './Authentication/Registration/Registration';
 import RequireAuth from './Authentication/RequireAuth/RequireAuth';
 import AddProducts from './Components/AddProducts/AddProducts';
 import ManageProducts from './Components/ManageProducts/ManageProducts';
+import MyItems from './Components/MyItems/MyItems';
 import NotFound from './Components/NotFound/NotFound';
 import OneItem from './Components/OneItem/OneItem';
 import Home from './Homepage/Home/Home';
@@ -23,6 +24,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/item' element={<Item></Item>}></Route>
+        <Route path='/myItems' element={
+          <RequireAuth>
+            <MyItems></MyItems>
+          </RequireAuth>
+        }></Route>
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <OneItem></OneItem>

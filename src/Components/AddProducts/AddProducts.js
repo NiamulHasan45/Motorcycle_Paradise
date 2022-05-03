@@ -1,12 +1,16 @@
 import React from 'react';
-import { useState } from 'react';
 import { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import './AddProducts.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddProducts = () => {
 
     // const[product, setProduct] = useState({});
+    const [user] = useAuthState(auth);
+    console.log(user.email);
+    
 
     const nameRef = useRef();
     const imagedRef = useRef();
@@ -23,7 +27,9 @@ const AddProducts = () => {
         const supplier = sellerRef.current.value;
         const quantity = amountRef.current.value;
         const description = descriptionRef.current.value;
-        const data = {name, img, price, supplier, quantity, description};
+        const email = user.email;
+        console.log(email);
+        const data = {email, name, img, price, supplier, quantity, description};
         // console.log(data)
         // await setProduct(data);
         // console.log(product);

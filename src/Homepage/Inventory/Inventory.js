@@ -12,6 +12,8 @@ const Inventory = () => {
             .then(data => setItems(data.slice(0,6)))
     }, [])
 
+    console.log(items);
+
     return (
         <div >
             <h2 className='my-5'>Currently Available Products</h2>

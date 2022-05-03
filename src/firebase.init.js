@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDyU1TZwfNR5IoyZB8XqnGs9QhhYeXNqr4",
-  authDomain: "fitbuzz-gym.firebaseapp.com",
-  projectId: "fitbuzz-gym",
-  storageBucket: "fitbuzz-gym.appspot.com",
-  messagingSenderId: "654024527641",
-  appId: "1:654024527641:web:ef94f2430976690102ff88"
+  apiKey: "AIzaSyDpanXHhAbNun1ncGISai3yRWUkTGPpj0k",
+  authDomain: "motorcycle-inventory-764ea.firebaseapp.com",
+  projectId: "motorcycle-inventory-764ea",
+  storageBucket: "motorcycle-inventory-764ea.appspot.com",
+  messagingSenderId: "341094474311",
+  appId: "1:341094474311:web:7e06633ffb28a23684c762"
 };
 
 // Initialize Firebase

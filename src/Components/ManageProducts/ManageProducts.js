@@ -27,6 +27,7 @@ const ManageProducts = () => {
                 })
         }
     }
+    console.log(items);
 
     return (
         <div  className='inventory'>
