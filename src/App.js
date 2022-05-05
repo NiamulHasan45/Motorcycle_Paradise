@@ -5,6 +5,7 @@ import LogIn from './Authentication/LogIn/LogIn';
 import Registration from './Authentication/Registration/Registration';
 import RequireAuth from './Authentication/RequireAuth/RequireAuth';
 import AddProducts from './Components/AddProducts/AddProducts';
+import Blogs from './Components/Blogs/Blogs';
 import ManageProducts from './Components/ManageProducts/ManageProducts';
 import MyItems from './Components/MyItems/MyItems';
 import NotFound from './Components/NotFound/NotFound';
@@ -24,6 +25,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/item' element={<Item></Item>}></Route>
+        <Route path='blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/myItems' element={
           <RequireAuth>
             <MyItems></MyItems>

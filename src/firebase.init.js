@@ -12,6 +12,28 @@ const firebaseConfig = {
   storageBucket: "motorcycle-inventory-764ea.appspot.com",
   messagingSenderId: "341094474311",
   appId: "1:341094474311:web:7e06633ffb28a23684c762"
+
+
+  // apiKey:`${process.env.API_KEY}`,
+  // authDomain: `${process.env.AUTH_DOMAIN}`,
+  // projectId: `${process.env.PROJECT_ID}`,
+  // storageBucket: `${process.env.STORAGE_BUCKET}`,
+  // messagingSenderId: `${process.env.MESSAGING_SENDER_ID}`,
+  // appId: `${process.env.APP_ID}`
+
+  // apiKey:process.env.API_KEY,
+  // authDomain:process.env.AUTH_DOMAIN,
+  // projectId:process.env.PROJECT_ID,
+  // storageBucket:process.env.STORAGE_BUCKET,
+  // messagingSenderId:process.env.MESSAGING_SENDER_ID,
+  // appId:process.env.APP_ID,
+
+  // apiKey:process.env.REACT_APP_apiKey,
+  // authDomain:process.env.REACT_APP_authDomain,
+  // projectId:process.env.REACT_APP_projectId,
+  // storageBucket:process.env.REACT_APP_storageBucket,
+  // messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  // appId:process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

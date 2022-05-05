@@ -12,14 +12,14 @@ const Inventory = () => {
             .then(data => setItems(data.slice(0,6)))
     }, [])
 
-    console.log(items);
+    // console.log(items);
 
     return (
         <div >
             <h2 className='my-5'>Currently Available Products</h2>
             <div className='container'>
             {
-                items.map(item=><Item item={item}></Item>)
+                items.map(item=><Item key={item._id} item={item}></Item>)
             }
             </div>
             <Link to='/inventory'>
