@@ -5,7 +5,7 @@ import './ManageProduct.css'
 const ManageProducts = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://fast-thicket-64418.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
@@ -14,7 +14,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://fast-thicket-64418.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

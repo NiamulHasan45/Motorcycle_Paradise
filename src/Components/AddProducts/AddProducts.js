@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import './AddProducts.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import toast from 'react-hot-toast';
 
 const AddProducts = () => {
 
@@ -35,7 +36,7 @@ const AddProducts = () => {
         // console.log(product);
 
 
-        const url = `http://localhost:5000/items`;
+        const url = `https://fast-thicket-64418.herokuapp.com/items`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -45,7 +46,7 @@ const AddProducts = () => {
         })
         .then(res=> res.json())
         .then(result =>{
-            console.log(result);
+            toast('Submit successful.')
         } )
 
     }

@@ -14,7 +14,7 @@ const OneItem = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://fast-thicket-64418.herokuapp.com/inventory/${id}`;
         console.log(url);
         fetch(url)
             .then(res => res.json())
@@ -31,7 +31,7 @@ const OneItem = () => {
             const data = { quantity };
 
             // setRemainig(quantity);
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://fast-thicket-64418.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -56,7 +56,7 @@ const OneItem = () => {
         
         const quantity = parseInt(itemRef.current.value) + number;
         const data = { quantity };
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://fast-thicket-64418.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

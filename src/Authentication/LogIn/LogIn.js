@@ -9,6 +9,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWith
 import toast, { Toaster } from 'react-hot-toast';
 import auth from '../../firebase.init';
 import Loading from '../../SharedComponents/Loading/Loading';
+import useToken from '../../Hooks/Hooks';
 
 
 const LogIn = () => {
@@ -66,9 +67,17 @@ const LogIn = () => {
         }
     }
 
+    const [token] = useToken(user);
+
     if (loading || googleLoading||gitLoading||sending) {
         return <Loading></Loading>;
     }
+
+    if (token) {
+        navigate(from, { replace: true });
+    }
+
+
     if(emailPassError){
         errorElement = <p className='text-danger'>{emailPassError.message}</p>
     }
@@ -83,9 +92,9 @@ const LogIn = () => {
     }
 
 
-    if (user || googleUser || gitUser) {
-        navigate(from, { replace: true });
-    }
+    // if (user || googleUser || gitUser) {
+    //     navigate(from, { replace: true });
+    // }
 
 
     return (

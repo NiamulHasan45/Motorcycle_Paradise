@@ -13,7 +13,7 @@ const MyItems = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/?email=${user.email}`;
+        const url = `https://fast-thicket-64418.herokuapp.com/inventory/?email=${user.email}`;
         console.log(url);
         fetch(url)
             .then(res => res.json())
@@ -22,7 +22,7 @@ const MyItems = () => {
 
     // useEffect(() => {
     //     const getOrders = async () => {
-    //         const url = `http://localhost:5000/inventory?email=${user.email}`;
+    //         const url = `https://fast-thicket-64418.herokuapp.com/inventory?email=${user.email}`;
     //         console.log(url)
 
     //             fetch(url)
@@ -48,7 +48,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://fast-thicket-64418.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
