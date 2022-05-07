@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link} from 'react-router-dom';
 import PlanTimeline from '../../Components/PlanTimeline/PlanTimeline';
+import Reviews from '../../Components/Review/Reviews';
 import Item from '../Items/Item';
 import './Inventory.css'
 
@@ -27,6 +28,8 @@ const Inventory = () => {
             </Link>
 
             <PlanTimeline></PlanTimeline>
+
+            <Reviews></Reviews>
         </div>
     );
 };

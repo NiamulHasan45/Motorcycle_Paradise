@@ -9,7 +9,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWith
 import toast, { Toaster } from 'react-hot-toast';
 import auth from '../../firebase.init';
 import Loading from '../../SharedComponents/Loading/Loading';
-import useToken from '../../Hooks/Hooks';
+import useToken from '../../Hooks/UseToken';
 
 
 const LogIn = () => {
@@ -92,9 +92,9 @@ const LogIn = () => {
     }
 
 
-    // if (user || googleUser || gitUser) {
-    //     navigate(from, { replace: true });
-    // }
+    if (googleUser || gitUser) {
+        navigate(from, { replace: true });
+    }
 
 
     return (
