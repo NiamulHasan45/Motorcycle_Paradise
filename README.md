@@ -15,6 +15,6 @@
     3. Javascript ES6
     4. Firebase
     5. node.js, node express
-    6. mongodb
+    
 
 
